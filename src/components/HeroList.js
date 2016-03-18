@@ -19,13 +19,15 @@ const HeroList = React.createClass({
 
   render: function() {
     return (
-      <ul id="heroes">
-        {
-          this.state.heroes.map(hero =>{
-            return <li key={hero.name}>{hero.name}</li>
-          })
-        }
-      </ul>
+      <div id="sidemenu">
+        <ul>
+          {
+            this.state.heroes.map(hero =>{
+              return <li key={hero.name}><a>{hero.name}</a></li>
+            })
+          }
+        </ul>
+      </div>
     );
   }
 });
