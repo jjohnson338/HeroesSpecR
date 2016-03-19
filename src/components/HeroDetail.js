@@ -11,8 +11,10 @@ const HeroDetail = React.createClass({
     else{
       return (
         <div id="content">
-          <h1>{this.props.selectedHero.name}</h1>
-          <h2>{this.props.selectedHero.title}</h2>
+          <span>
+            <h1 id="name">{this.props.selectedHero.name}</h1>
+            <h2 id="title"> - {this.props.selectedHero.title}</h2>          
+          </span>
         </div>
       );
     }

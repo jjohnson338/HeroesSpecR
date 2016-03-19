@@ -14,9 +14,19 @@ html, body {
 #content {
     width: 80%;
     height: auto;
-    outline: 1px solid;
+    padding-left: 2%;
     position: absolute;
     right: 0;
+}
+
+#name {
+  display: inline;
+  padding-left: 2%;
+}
+
+#title {
+  display: inline;
+  padding-left: 4%;
 }
 
 #sidemenu ul {
