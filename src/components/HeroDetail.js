@@ -1,5 +1,5 @@
 import React from "react";
-const TalentRow = require('./HeroDetail/TalentRow');
+const TalentSelector = require('./HeroDetail/TalentSelector');
 const HeroDetail = React.createClass({
   render: function() {
     if(this.props.selectedHero != null)
@@ -16,14 +16,16 @@ const HeroDetail = React.createClass({
           <span>
             <h1 id="name">{this.props.selectedHero.name}</h1>
             <h2 id="title"> - {this.props.selectedHero.title}</h2>
-            {Object.keys(talents).map((key)=>{
-              return <div>
-                       <h3>Level {key}:</h3>
-                       <TalentRow talents={talents[key]} />
-                     </div>
+          </span>
+            {Object.keys(talents).map((key, index)=>{
+              return (
+                 <div>
+                   <h3>Level {key}:</h3>
+                   <TalentSelector talents={talents[key]} />
+                 </div>
+               )
               })
             }
-          </span>
         </div>
       );
     }
